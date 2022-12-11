@@ -78,8 +78,8 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<UStorageChassisComponent*> OverrideChildStorageChassis;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
-    TArray<USlotOrganizationRule*> OrganizationRules;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Instanced, meta = (AllowPrivateAccess = true))
+		TArray<USlotOrganizationRule*> OrganizationRules;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_SlotIndicatorLocations, meta=(AllowPrivateAccess=true))
     TArray<FSlotIndicatorLocation> SlotIndicatorLocations;
